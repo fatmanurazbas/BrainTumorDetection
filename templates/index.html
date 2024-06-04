@@ -1,0 +1,31 @@
+{% extends "import.html" %} 
+{% block content %}
+
+<center>
+<div class="card card-custom-bg">
+    <div class="card-body text-center">
+        <br><h2 class="card-title">MR Görüntüsünü Yükleyiniz</h2><br>
+
+    <form id="upload-file" method="post" enctype="multipart/form-data" class="my-4">
+         <input type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+         <img id="imagePreview"  class="img-thumbnail mx-auto" src="#" style="width:300px;height:300px;"/><br><br>
+         <div class="mt-3">
+            <button type="button" class="btn btn-info btn-lg-8" id="btn-predict">Sonucu Görüntüle</button>
+         </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result" class="mt-4">
+        <span> </span>
+    </h3>
+
+
+</center>
+    </div>
+</div>
+<br><br>
+{% endblock %}
